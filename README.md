@@ -4,7 +4,7 @@
 > **Status do Backend:** 100% Compilando (0 Erros, 0 Alertas) | .NET 8 (ASP.NET Core)  
 > **Status do Frontend:** Backlog Planejado (Vite + TypeScript)  
 
-O **MIMIC AI** é uma arquitetura inteligente de software projetada para **reduzir progressivamente os custos operacionais de chamadas a Grandes Modelos de Linguagem (LLMs)** mantendo máxima latência, segurança e qualidade de inferência. 
+O **MIMIC AI** é uma arquitetura inteligente de software projetada para **reduzir progressivamente os custos operacionais de chamadas a Grandes Modelos de Linguagem (LLMs)** mantendo máxima segurança e qualidade de inferência. 
 
 A ideia central é um **cache semântico híbrido local** que atua como primeira camada de processamento de todas as requisições. Se uma pergunta for semânticamente similar a conhecimentos já respondidos anteriormente por uma IA de alta performance externa (com limiar de similaridade de cosseno $T \ge 0.78$), a resposta é processada e devolvida de forma instantânea por uma IA local (ex: Gemma2, Phi-3). Caso contrário (*Cache Miss*), a requisição é enviada ao modelo externo de alta capacidade (Gemini API) e a interação é vetorizada em segundo plano pelo agente assíncrono de aprendizado **Galileu** para alimentar o banco vetorial local e expandir o cérebro do sistema para futuras consultas.
 
