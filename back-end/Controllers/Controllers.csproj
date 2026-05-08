@@ -1,4 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <ProjectReference Include="..\Services\Services.csproj" />
+      <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>

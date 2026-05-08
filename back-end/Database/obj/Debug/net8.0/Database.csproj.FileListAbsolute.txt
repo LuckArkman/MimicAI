@@ -1,0 +1,13 @@
+I:\MimicAI\back-end\Database\bin\Debug\net8.0\Database.deps.json
+I:\MimicAI\back-end\Database\bin\Debug\net8.0\Database.dll
+I:\MimicAI\back-end\Database\bin\Debug\net8.0\Database.pdb
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.csproj.AssemblyReference.cache
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.AssemblyInfoInputs.cache
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.AssemblyInfo.cs
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.csproj.CoreCompileInputs.cache
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.sourcelink.json
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.dll
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\refint\Database.dll
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\Database.pdb
+I:\MimicAI\back-end\Database\obj\Debug\net8.0\ref\Database.dll
