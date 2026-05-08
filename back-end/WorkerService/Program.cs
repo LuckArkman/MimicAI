@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Repositorys.Implementations;
 using Repositorys.Interfaces;
 using Services.Implementations;
+using Services.Interfaces;
 using WorkerService.BackgroundServices;
 
 var builder = Host.CreateApplicationBuilder(args);
@@ -31,6 +32,7 @@ builder.Services.AddHttpClient();
 
 // Register repositories needed by the background AI Agent (Galileu)
 builder.Services.AddScoped<IVectorRepository, VectorRepository>();
+builder.Services.AddScoped<IEmbeddingService, EmbeddingService>();
 
 // Register Singleton Channels
 var queueChannel = Channel.CreateUnbounded<IngestionTask>(new UnboundedChannelOptions

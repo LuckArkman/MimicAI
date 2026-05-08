@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Repositorys.Interfaces;
 using Services.Implementations;
+using Services.Interfaces;
 
 namespace WorkerService.BackgroundServices;
 
@@ -73,8 +74,13 @@ public class GalileuWorker : BackgroundService
                         string documentContent = $"Pergunta: {task.Prompt}\nResposta: {task.Answer}";
                         string documentId = Guid.NewGuid().ToString("N");
 
-                        // 2. Computa o embedding local
-                        float[] embedding = GenerateLocalEmbedding(documentContent);
+                        // 2. Computa o embedding local usando o agente BERT unificado
+                        float[] embedding;
+                        using (var scope = _serviceScopeFactory.CreateScope())
+                        {
+                            var embeddingService = scope.ServiceProvider.GetRequiredService<IEmbeddingService>();
+                            embedding = await embeddingService.GenerateEmbeddingAsync(documentContent);
+                        }
 
                         // 3. Estrutura os metadados
                         var metadata = new Dictionary<string, object>
@@ -114,40 +120,5 @@ public class GalileuWorker : BackgroundService
                 await Task.Delay(5000, stoppingToken); // delay to prevent rapid looping on error
             }
         }
-    }
-
-    private float[] GenerateLocalEmbedding(string text)
-    {
-        // Deterministic 384-dimensional vectorizer matching the RagService calculation
-        float[] vector = new float[384];
-        if (string.IsNullOrEmpty(text)) return vector;
-
-        string normalized = text.ToLower();
-        var words = normalized.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-        for (int i = 0; i < vector.Length; i++)
-        {
-            double sum = 0;
-            foreach (var word in words)
-            {
-                int hash = word.GetHashCode();
-                sum += Math.Sin(hash + i) * Math.Cos((double)i / vector.Length);
-            }
-            vector[i] = (float)Math.Clamp(sum / (words.Length > 0 ? words.Length : 1), -1.0, 1.0);
-        }
-
-        // Normalize
-        double normSum = 0;
-        for (int i = 0; i < vector.Length; i++)
-            normSum += vector[i] * vector[i];
-
-        double norm = Math.Sqrt(normSum);
-        if (norm > 0)
-        {
-            for (int i = 0; i < vector.Length; i++)
-                vector[i] = (float)(vector[i] / norm);
-        }
-
-        return vector;
     }
 }
