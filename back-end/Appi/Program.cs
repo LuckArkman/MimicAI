@@ -59,6 +59,9 @@ builder.Services.AddScoped<IVectorRepository, VectorRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IExternalLlmService, ExternalLlmService>();
 builder.Services.AddScoped<IRagService, RagService>();
+builder.Services.AddScoped<IFinetuningService, FinetuningService>();
+builder.Services.AddScoped<IOrchestrationService, OrchestrationService>();
+builder.Services.AddScoped<IIntegrationService, IntegrationService>();
 
 // 5. Register Ingestion Event Channel (Thread-safe background queue)
 var queueChannel = Channel.CreateUnbounded<IngestionTask>(new UnboundedChannelOptions
