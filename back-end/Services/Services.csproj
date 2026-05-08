@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
       <ProjectReference Include="..\Repositorys\Repositorys.csproj" />
@@ -7,6 +7,8 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.SemanticKernel" Version="1.15.0" />
+      <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.17.1" />
+      <PackageReference Include="Microsoft.ML.Tokenizers" Version="0.22.0-preview.1" />
     </ItemGroup>
 
     <PropertyGroup>

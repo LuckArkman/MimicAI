@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tie4dcM62jE=",
+  "dgSpecHash": "0UnOtKvpvsk=",
   "success": true,
   "projectFilePath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,9 @@
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.1\\microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.17.1\\microsoft.ml.onnxruntime.1.17.1.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.17.1\\microsoft.ml.onnxruntime.managed.1.17.1.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.tokenizers\\0.22.0-preview.24162.2\\microsoft.ml.tokenizers.0.22.0-preview.24162.2.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.semantickernel\\1.15.0\\microsoft.semantickernel.1.15.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.semantickernel.abstractions\\1.15.0\\microsoft.semantickernel.abstractions.1.15.0.nupkg.sha512",
@@ -48,5 +51,18 @@
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "Services depends on Microsoft.ML.Tokenizers (>= 0.22.0-preview.1) but Microsoft.ML.Tokenizers 0.22.0-preview.1 was not found. Microsoft.ML.Tokenizers 0.22.0-preview.24162.2 was resolved instead.",
+      "projectPath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
+      "warningLevel": 1,
+      "filePath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
+      "libraryId": "Microsoft.ML.Tokenizers",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

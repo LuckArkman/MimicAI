@@ -6,7 +6,7 @@
 
 O **MIMIC AI** é uma arquitetura inteligente de software projetada para **reduzir progressivamente os custos operacionais de chamadas a Grandes Modelos de Linguagem (LLMs)** mantendo máxima segurança e qualidade de inferência. 
 
-A ideia central é um **cache semântico híbrido local** que atua como primeira camada de processamento de todas as requisições. Se uma pergunta for semânticamente similar a conhecimentos já respondidos anteriormente por uma IA de alta performance externa (com limiar de similaridade de cosseno $T \ge 0.78$), a resposta é processada e devolvida de forma instantânea por uma IA local (ex: Gemma2, Phi-3). Caso contrário (*Cache Miss*), a requisição é enviada ao modelo externo de alta capacidade (Gemini API) e a interação é vetorizada em segundo plano pelo agente assíncrono de aprendizado **Galileu** para alimentar o banco vetorial local e expandir o cérebro do sistema para futuras consultas.
+A ideia central é um **cache semântico híbrido local** que atua como primeira camada de processamento de todas as requisições. Se uma pergunta for semânticamente similar a conhecimentos já respondidos anteriormente por uma IA de alta performance externa (com limiar de similaridade de cosseno $T \ge 0.78$), a resposta é processada e devolvida de forma instantânea por uma IA local baseada no modelo **GPT-2 em formato ONNX** de baixíssima latência executado nativamente em C#. Caso contrário (*Cache Miss*), a requisição é enviada ao modelo externo de alta capacidade (Gemini API) e a interação é vetorizada em segundo plano pelo agente assíncrono de aprendizado **Galileu** (baseado em **BERT**) para alimentar o banco vetorial local e expandir o cérebro do sistema para futuras consultas.
 
 ---
 
@@ -17,10 +17,10 @@ O diagrama abaixo ilustra o fluxo de dados do usuário até o roteamento intelig
 ```mermaid
 graph TD
     User([Usuário envia Prompt]) --> API[API Gateway / Appi]
-    API --> Embed[BERT/MiniLM Agent: Gera Vetor do Prompt]
+    API --> Embed[Agente BERT: Gera Vetor do Prompt]
     Embed --> ChromaDB{Busca Semântica no ChromaDB}
     
-    ChromaDB -- "Maior similaridade >= 0.78 (HIT)" --> LocalLLM[IA Local: Ollama gemma2 com Contexto]
+    ChromaDB -- "Maior similaridade >= 0.78 (HIT)" --> LocalLLM[IA Local: GPT-2 ONNX com Contexto]
     LocalLLM --> SaveMongoLocal[Salva Mensagem no MongoDB - Custo: $0.00]
     SaveMongoLocal --> UserResponse[Retorna Resposta ao Usuário]
     
@@ -31,7 +31,7 @@ graph TD
     
     %% Background Job
     EnqueueChannel -.-> GalileuWorker[Agente Galileu: Background Worker]
-    GalileuWorker -.-> IngestEmbed[ BERT: Gera Vetor do Par Pergunta-Resposta ]
+    GalileuWorker -.-> IngestEmbed[ Agente BERT: Gera Vetor do Par Pergunta-Resposta ]
     IngestEmbed -.-> ChromaAdd[Insere novo conhecimento no ChromaDB]
 ```
 
