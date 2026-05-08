@@ -1,6 +1,7 @@
 using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Repositorys.Interfaces;
@@ -8,30 +9,48 @@ using Services.Implementations;
 
 namespace WorkerService.BackgroundServices;
 
+/// <summary>
+/// Worker de segundo plano assíncrono (Agente Galileu de IA).
+/// Consome tarefas de vetorização e as indexa no banco de dados vetorial ChromaDB de forma não-bloqueante.
+/// </summary>
 public class GalileuWorker : BackgroundService
 {
     private readonly ILogger<GalileuWorker> _logger;
-    private readonly IVectorRepository _vectorRepository;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
     private readonly ChannelReader<IngestionTask> _channelReader;
 
+    /// <summary>
+    /// Inicializa uma nova instância de <see cref="GalileuWorker"/>.
+    /// </summary>
+    /// <param name="logger">O logger para logs de segundo plano.</param>
+    /// <param name="serviceScopeFactory">A fábrica para criação de escopos e resolução de dependências Scoped.</param>
+    /// <param name="channel">O canal concorrente de tarefas de ingestão.</param>
     public GalileuWorker(
         ILogger<GalileuWorker> logger,
-        IVectorRepository vectorRepository,
+        IServiceScopeFactory serviceScopeFactory,
         Channel<IngestionTask> channel)
     {
         _logger = logger;
-        _vectorRepository = vectorRepository;
+        _serviceScopeFactory = serviceScopeFactory;
         _channelReader = channel.Reader;
     }
 
+    /// <summary>
+    /// Executa o processamento contínuo das tarefas em segundo plano.
+    /// </summary>
+    /// <param name="stoppingToken">O token de cancelamento de desligamento do Host.</param>
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("=== AGENTE GALILEU DE IA INICIADO E OPERANDO EM SEGUNDO PLANO ===");
 
-        // Ensure vector collection exists at startup
+        // Assegura que a coleção vetorial existe na inicialização usando um escopo temporário
         try
         {
-            await _vectorRepository.EnsureCollectionExistsAsync("mimic_ai_memory");
+            using (var scope = _serviceScopeFactory.CreateScope())
+            {
+                var vectorRepository = scope.ServiceProvider.GetRequiredService<IVectorRepository>();
+                await vectorRepository.EnsureCollectionExistsAsync("mimic_ai_memory");
+            }
             _logger.LogInformation("Coleção vetorial 'mimic_ai_memory' inicializada/verificada no ChromaDB.");
         }
         catch (Exception ex)
@@ -43,21 +62,21 @@ public class GalileuWorker : BackgroundService
         {
             try
             {
-                // Wait for a new ingestion task in the channel
+                // Aguarda por novas tarefas de ingestão no canal
                 if (await _channelReader.WaitToReadAsync(stoppingToken))
                 {
                     while (_channelReader.TryRead(out var task))
                     {
                         _logger.LogInformation($"[GALILEU AGENT] Nova interação capturada. Iniciando vetorização e tratamento de contexto...");
 
-                        // 1. Process prompt and remote answer into a single document memory
+                        // 1. Prepara o conteúdo unificado da interação
                         string documentContent = $"Pergunta: {task.Prompt}\nResposta: {task.Answer}";
                         string documentId = Guid.NewGuid().ToString("N");
 
-                        // 2. Generate vector embedding using local embedding generator
+                        // 2. Computa o embedding local
                         float[] embedding = GenerateLocalEmbedding(documentContent);
 
-                        // 3. Storing metadata
+                        // 3. Estrutura os metadados
                         var metadata = new Dictionary<string, object>
                         {
                             { "prompt", task.Prompt },
@@ -65,8 +84,13 @@ public class GalileuWorker : BackgroundService
                             { "source", "external_learning" }
                         };
 
-                        // 4. Save inside ChromaDB
-                        bool success = await _vectorRepository.InsertVectorAsync(documentId, embedding, documentContent, metadata);
+                        // 4. Salva no banco de dados vetorial resolvendo o repositório em um escopo próprio
+                        bool success = false;
+                        using (var scope = _serviceScopeFactory.CreateScope())
+                        {
+                            var vectorRepository = scope.ServiceProvider.GetRequiredService<IVectorRepository>();
+                            success = await vectorRepository.InsertVectorAsync(documentId, embedding, documentContent, metadata);
+                        }
 
                         if (success)
                         {
