@@ -11,7 +11,7 @@ public class EmbeddingService : IEmbeddingService
 {
     private readonly HttpClient _httpClient;
     private readonly string _ollamaUrl = "http://localhost:11434/api/embeddings";
-    private readonly string _embeddingModel = "all-minilm"; // standard lightweight local embedding model
+    private readonly string _embeddingModel = "bert"; // standard lightweight local embedding model
 
     public EmbeddingService(HttpClient httpClient, IConfiguration configuration)
     {
