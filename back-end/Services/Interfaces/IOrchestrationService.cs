@@ -4,6 +4,7 @@ public interface IOrchestrationService
 {
     Task<AgentStatusDto> GetAgentStatusAsync();
     Task<bool> TriggerManualLearningAsync(string prompt, string response);
+    Task<ParquetIngestionResultDto> IngestParquetFileAsync(string filePath);
 }
 
 public class AgentStatusDto
@@ -15,4 +16,11 @@ public class AgentStatusDto
     public string ChromaDbCollection { get; set; } = "mimic_ai_memory";
     public bool ChromaDbConnected { get; set; }
     public double CosineSimilarityThreshold { get; set; }
+}
+
+public class ParquetIngestionResultDto
+{
+    public bool Success { get; set; }
+    public int ImportedCount { get; set; }
+    public string Message { get; set; } = string.Empty;
 }

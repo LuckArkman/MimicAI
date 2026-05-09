@@ -21,7 +21,7 @@ public class ChromaDbContext
     {
         try
         {
-            var response = await _httpClient.GetAsync($"{_baseUrl}/api/v1/heartbeat");
+            var response = await _httpClient.GetAsync($"{_baseUrl}/api/v2/heartbeat");
             return response.IsSuccessStatusCode;
         }
         catch
@@ -37,7 +37,7 @@ public class ChromaDbContext
             var payload = new { name = collectionName, metadata = new { hnsw_space = "cosine" } };
             var content = new StringContent(JsonSerializer.Serialize(payload), System.Text.Encoding.UTF8, "application/json");
             
-            var response = await _httpClient.PostAsync($"{_baseUrl}/api/v1/collections", content);
+            var response = await _httpClient.PostAsync($"{_baseUrl}/api/v2/tenants/default_tenant/databases/default_database/collections", content);
             return response.IsSuccessStatusCode || response.StatusCode == System.Net.HttpStatusCode.Conflict;
         }
         catch

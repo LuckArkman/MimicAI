@@ -21,27 +21,27 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(policy =>
     {
         policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
 // 2. Configure Databases
 // PostgreSQL (User authentication)
-var postgresConn = builder.Configuration.GetConnectionString("DefaultConnection") 
-    ?? "Host=localhost;Database=mimic_ai_db;Username=postgres;Password=postgres";
+var postgresConn = builder.Configuration.GetConnectionString("DefaultConnection")
+                   ?? "Host=localhost;Database=mimic_ai_db;Username=postgres;Password=postgres";
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(postgresConn));
 
 // MongoDB (Chat History)
-var mongoConn = builder.Configuration.GetConnectionString("MongoConnection") 
-    ?? "mongodb://localhost:27017";
+var mongoConn = builder.Configuration.GetConnectionString("MongoConnection")
+                ?? "mongodb://localhost:27017";
 var mongoDbName = builder.Configuration["MongoDatabaseName"] ?? "mimic_ai_chat_db";
 builder.Services.AddSingleton(new MongoDbContext(mongoConn, mongoDbName));
 
 // ChromaDB (Vector database)
 var chromaUrl = builder.Configuration["ChromaDB:BaseUrl"] ?? "http://localhost:8000";
-builder.Services.AddSingleton(sp => 
+builder.Services.AddSingleton(sp =>
 {
     var httpClient = sp.GetRequiredService<IHttpClientFactory>().CreateClient("ChromaClient");
     return new ChromaDbContext(httpClient, chromaUrl);
@@ -86,11 +86,9 @@ var app = builder.Build();
 app.UseCors();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

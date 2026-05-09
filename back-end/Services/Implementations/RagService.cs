@@ -33,20 +33,58 @@ public class RagService : IRagService
 
     public async Task<ChatResponseDto> ProcessQueryAsync(string sessionId, string userId, string prompt)
     {
-        // 1. Generate local embedding vector for the prompt (delegated to BERT/MiniLM Agent)
+        // 0. Save User prompt message to MongoDB to establish conversational thread history
+        var userMsg = new ChatMessageDocument
+        {
+            SessionId = sessionId,
+            UserId = userId,
+            Sender = "user",
+            Content = prompt,
+            IsExternal = false,
+            SimilarityScore = 0.0,
+            ResolutionType = "user",
+            CustoEstimado = 0.0,
+            Timestamp = DateTime.UtcNow
+        };
+        await _chatHistoryRepository.SaveMessageAsync(userMsg);
+
+        // 1. Extract recent conversation history (MCP Context preservation)
+        var previousMessages = await _chatHistoryRepository.GetMessagesBySessionIdAsync(sessionId);
+        var historyBuilder = new System.Text.StringBuilder();
+        if (previousMessages != null && previousMessages.Any())
+        {
+            // Fetch last 10 messages to fit model context windows comfortably
+            var lastMessages = previousMessages.OrderBy(m => m.Timestamp).TakeLast(10);
+            foreach (var msg in lastMessages)
+            {
+                string senderName = msg.Sender == "user" ? "Usuário" : "Agente Galileu";
+                historyBuilder.AppendLine($"{senderName}: {msg.Content}");
+            }
+        }
+        string conversationHistory = historyBuilder.ToString();
+
+        // 2. Generate local embedding vector for the prompt (delegated to BERT/MiniLM Agent)
         float[] queryEmbedding = await _embeddingService.GenerateEmbeddingAsync(prompt);
 
-        // 2. Perform semantic search in local ChromaDB
+        // 3. Perform semantic search in local ChromaDB
         var vectorMatch = await _vectorRepository.SearchSimilarVectorsAsync(queryEmbedding, limit: 1);
 
-        // 3. Evaluate context sufficiency
+        // 4. Evaluate context sufficiency
         if (vectorMatch != null && vectorMatch.SimilarityScore >= _cosineThreshold)
         {
             // CACHE HIT - local model digestion (delegated to LocalLlmService)
             string context = vectorMatch.DocumentContent;
-            string localAnswer = await _localLlmService.GenerateResponseAsync(prompt, context);
+            
+            // Prepend conversation history to local model to maintain context (MCP)
+            string localPrompt = prompt;
+            if (!string.IsNullOrEmpty(conversationHistory))
+            {
+                localPrompt = $"Histórico da Conversa:\n{conversationHistory}\nPergunta: {prompt}";
+            }
 
-            // Store message in MongoDB
+            string localAnswer = await _localLlmService.GenerateResponseAsync(localPrompt, context);
+
+            // Store AI response message in MongoDB
             var chatMsg = new ChatMessageDocument
             {
                 SessionId = sessionId,
@@ -72,9 +110,11 @@ public class RagService : IRagService
         }
 
         // CACHE MISS - escalate to external LLM (Gemini API)
-        var externalResult = await _externalLlm.GenerateResponseAsync(prompt);
+        // Feed conversational context as a system prompt to Gemini to preserve continuity (MCP)
+        string systemMessage = "Você é o Agente Galileu, uma inteligência artificial local de triagem corporativa inteligente. Use o histórico recente para manter o contexto da conversa:\n" + conversationHistory;
+        var externalResult = await _externalLlm.GenerateResponseAsync(prompt, systemMessage);
 
-        // Store message in MongoDB
+        // Store AI response message in MongoDB
         var externalMsg = new ChatMessageDocument
         {
             SessionId = sessionId,
@@ -89,7 +129,7 @@ public class RagService : IRagService
         };
         await _chatHistoryRepository.SaveMessageAsync(externalMsg);
 
-        // 4. Enqueue background ingestion task to Worker Service (Galileu Agent) for learning
+        // Enqueue background ingestion task to Worker Service (Galileu Agent) for learning
         await _channelWriter.WriteAsync(new IngestionTask(prompt, externalResult.Content));
 
         return new ChatResponseDto

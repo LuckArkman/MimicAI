@@ -1,0 +1,101 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: mimic-postgres
+    environment:
+      POSTGRES_DB: mimic_ai_db
+      POSTGRES_USER: mimic_user
+      POSTGRES_PASSWORD: mimic_secure_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mimic_user -d mimic_ai_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:7.0
+    container_name: mimic-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mimic_mongo_admin
+      MONGO_INITDB_ROOT_PASSWORD: mimic_mongo_secure_pass
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --eval 'db.runCommand({ping:1})' --quiet"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: mimic-chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=FALSE
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v2/heartbeat')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # 4. Appi (C# Web API Gateway)
+  appi:
+    image: mimic-appi:latest
+    container_name: mimic-appi
+    build:
+      context: .
+      dockerfile: Appi/Dockerfile
+    ports:
+      - "5247:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=mimic_ai_db;Username=mimic_user;Password=mimic_secure_pass
+      - ConnectionStrings__MongoConnection=mongodb://mimic_mongo_admin:mimic_mongo_secure_pass@mongodb:27017
+      - ChromaDB__BaseUrl=http://chromadb:8000
+      - ExternalLlm__ApiKey=AIzaSyAJ8smcf4UkSqEgmKeG0GQkoOptcSYu9AY
+      - ExternalLlm__Model=gemini-2.5-flash
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+      chromadb:
+        condition: service_started
+    volumes:
+      - "I:/Galileu.Node:/Galileu.Node"
+    restart: unless-stopped
+
+  # 5. Frontend (Vite + TypeScript Glassmorphic SPA Served via Nginx)
+  frontend:
+    image: mimic-frontend:latest
+    container_name: mimic-frontend
+    build:
+      context: ../front-end
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - appi
+    restart: unless-stopped
+
+
+volumes:
+  postgres_data:
+    driver: local
+  mongo_data:
+    driver: local
+  chroma_data:
+    driver: local

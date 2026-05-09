@@ -1,90 +1,201 @@
 {
   "version": 2,
-  "dgSpecHash": "BHg3OeWSqCg=",
-  "success": true,
+  "dgSpecHash": "DKZHRnyFvdk=",
+  "success": false,
   "projectFilePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\MPLopes\\.nuget\\packages\\azure.ai.openai\\1.0.0-beta.17\\azure.ai.openai.1.0.0-beta.17.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\azure.core\\1.39.0\\azure.core.1.39.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.4\\microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.4\\microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.2\\microsoft.extensions.configuration.binder.8.0.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.commandline\\8.0.0\\microsoft.extensions.configuration.commandline.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\8.0.0\\microsoft.extensions.configuration.environmentvariables.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\8.0.1\\microsoft.extensions.configuration.fileextensions.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.json\\8.0.1\\microsoft.extensions.configuration.json.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.configuration.usersecrets\\8.0.1\\microsoft.extensions.configuration.usersecrets.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.diagnostics\\8.0.1\\microsoft.extensions.diagnostics.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\8.0.1\\microsoft.extensions.diagnostics.abstractions.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\8.0.0\\microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\8.0.0\\microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.hosting\\8.0.1\\microsoft.extensions.hosting.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\8.0.1\\microsoft.extensions.hosting.abstractions.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.http\\8.0.0\\microsoft.extensions.http.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging\\8.0.1\\microsoft.extensions.logging.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.configuration\\8.0.1\\microsoft.extensions.logging.configuration.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.console\\8.0.1\\microsoft.extensions.logging.console.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.debug\\8.0.1\\microsoft.extensions.logging.debug.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.eventlog\\8.0.1\\microsoft.extensions.logging.eventlog.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.eventsource\\8.0.1\\microsoft.extensions.logging.eventsource.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.17.1\\microsoft.ml.onnxruntime.1.17.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.17.1\\microsoft.ml.onnxruntime.managed.1.17.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.tokenizers\\0.22.0-preview.24162.2\\microsoft.ml.tokenizers.0.22.0-preview.24162.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.semantickernel\\1.15.0\\microsoft.semantickernel.1.15.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.semantickernel.abstractions\\1.15.0\\microsoft.semantickernel.abstractions.1.15.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.semantickernel.connectors.openai\\1.15.0\\microsoft.semantickernel.connectors.openai.1.15.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.semantickernel.core\\1.15.0\\microsoft.semantickernel.core.1.15.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\mongodb.bson\\3.8.0\\mongodb.bson.3.8.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\mongodb.driver\\3.8.0\\mongodb.driver.3.8.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.1\\system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.1\\system.diagnostics.eventlog.8.0.1.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.text.json\\8.0.2\\system.text.json.8.0.2.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\MPLopes\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": [
     {
-      "code": "NU1603",
-      "level": "Warning",
-      "message": "Services depends on Microsoft.ML.Tokenizers (>= 0.22.0-preview.1) but Microsoft.ML.Tokenizers 0.22.0-preview.1 was not found. Microsoft.ML.Tokenizers 0.22.0-preview.24162.2 was resolved instead.",
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
       "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
-      "warningLevel": 1,
       "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
-      "libraryId": "Microsoft.ML.Tokenizers",
-      "targetGraphs": [
-        "net8.0"
-      ]
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist.",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "targetGraphs": []
     }
   ]
 }

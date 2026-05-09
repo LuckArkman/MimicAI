@@ -26,7 +26,7 @@ public class VectorRepository : IVectorRepository
 
         try
         {
-            var response = await _httpClient.GetAsync($"{_chromaContext.BaseUrl}/api/v1/collections");
+            var response = await _httpClient.GetAsync($"{_chromaContext.BaseUrl}/api/v2/tenants/default_tenant/databases/default_database/collections");
             if (!response.IsSuccessStatusCode) return null;
 
             var jsonString = await response.Content.ReadAsStringAsync();
@@ -78,7 +78,7 @@ public class VectorRepository : IVectorRepository
             };
 
             var content = new StringContent(JsonSerializer.Serialize(queryPayload), Encoding.UTF8, "application/json");
-            var response = await _httpClient.PostAsync($"{_chromaContext.BaseUrl}/api/v1/collections/{collectionId}/query", content);
+            var response = await _httpClient.PostAsync($"{_chromaContext.BaseUrl}/api/v2/tenants/default_tenant/databases/default_database/collections/{collectionId}/query", content);
             
             if (!response.IsSuccessStatusCode) return null;
 
@@ -141,7 +141,7 @@ public class VectorRepository : IVectorRepository
             };
 
             var content = new StringContent(JsonSerializer.Serialize(addPayload), Encoding.UTF8, "application/json");
-            var response = await _httpClient.PostAsync($"{_chromaContext.BaseUrl}/api/v1/collections/{collectionId}/add", content);
+            var response = await _httpClient.PostAsync($"{_chromaContext.BaseUrl}/api/v2/tenants/default_tenant/databases/default_database/collections/{collectionId}/add", content);
             
             return response.IsSuccessStatusCode;
         }

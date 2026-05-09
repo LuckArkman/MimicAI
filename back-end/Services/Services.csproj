@@ -9,6 +9,7 @@
       <PackageReference Include="Microsoft.SemanticKernel" Version="1.15.0" />
       <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.17.1" />
       <PackageReference Include="Microsoft.ML.Tokenizers" Version="0.22.0-preview.1" />
+      <PackageReference Include="Parquet.Net" Version="6.0.2" />
     </ItemGroup>
 
     <PropertyGroup>

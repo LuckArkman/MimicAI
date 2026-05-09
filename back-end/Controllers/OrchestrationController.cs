@@ -37,6 +37,24 @@ public class OrchestrationController : ControllerBase
 
         return Ok(new { message = "Interação enviada com sucesso para a fila do agente Galileu!" });
     }
+
+    [HttpPost("ingest-parquet")]
+    public async Task<IActionResult> IngestParquet([FromBody] ParquetIngestionRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.FilePath))
+        {
+            return BadRequest(new { message = "O campo 'filePath' é obrigatório para a importação." });
+        }
+
+        var result = await _orchestrationService.IngestParquetFileAsync(request.FilePath);
+        if (!result.Success)
+        {
+            return BadRequest(result);
+        }
+
+        return Ok(result);
+    }
 }
 
 public record ManualLearningRequest(string Prompt, string Response);
+public record ParquetIngestionRequest(string FilePath);
