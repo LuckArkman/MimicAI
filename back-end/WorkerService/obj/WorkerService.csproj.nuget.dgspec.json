@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj": {}
+    "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj": {}
   },
   "projects": {
-    "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
+    "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectUniqueName": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "I:\\MimicAI\\back-end\\Database\\obj\\",
+        "outputPath": "i:\\MimicAI\\back-end\\Database\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -23,7 +20,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -78,18 +74,15 @@
         }
       }
     },
-    "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+    "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "projectUniqueName": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
         "projectName": "Repositorys",
-        "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "I:\\MimicAI\\back-end\\Repositorys\\obj\\",
+        "outputPath": "i:\\MimicAI\\back-end\\Repositorys\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -97,7 +90,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -105,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
-                "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
+              "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
+                "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
               }
             }
           }
@@ -146,18 +138,15 @@
         }
       }
     },
-    "I:\\MimicAI\\back-end\\Services\\Services.csproj": {
+    "i:\\MimicAI\\back-end\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\MimicAI\\back-end\\Services\\Services.csproj",
+        "projectUniqueName": "i:\\MimicAI\\back-end\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "I:\\MimicAI\\back-end\\Services\\Services.csproj",
+        "projectPath": "i:\\MimicAI\\back-end\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "I:\\MimicAI\\back-end\\Services\\obj\\",
+        "outputPath": "i:\\MimicAI\\back-end\\Services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -165,7 +154,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -173,11 +161,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
-                "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
+              "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
+                "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
               },
-              "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
-                "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
+              "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+                "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
               }
             }
           }
@@ -235,18 +223,15 @@
         }
       }
     },
-    "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj": {
+    "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+        "projectUniqueName": "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
         "projectName": "WorkerService",
-        "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+        "projectPath": "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "I:\\MimicAI\\back-end\\WorkerService\\obj\\",
+        "outputPath": "i:\\MimicAI\\back-end\\WorkerService\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -254,7 +239,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -262,14 +246,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
-                "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
+              "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
+                "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
               },
-              "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
-                "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
+              "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+                "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
               },
-              "I:\\MimicAI\\back-end\\Services\\Services.csproj": {
-                "projectPath": "I:\\MimicAI\\back-end\\Services\\Services.csproj"
+              "i:\\MimicAI\\back-end\\Services\\Services.csproj": {
+                "projectPath": "i:\\MimicAI\\back-end\\Services\\Services.csproj"
               }
             }
           }

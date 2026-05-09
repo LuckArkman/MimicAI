@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "I:\\MimicAI\\back-end\\Database\\Database.csproj": {}
+    "i:\\MimicAI\\back-end\\Database\\Database.csproj": {}
   },
   "projects": {
-    "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
+    "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectUniqueName": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "I:\\MimicAI\\back-end\\Database\\obj\\",
+        "outputPath": "i:\\MimicAI\\back-end\\Database\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -23,7 +20,6 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

@@ -1295,21 +1295,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MPLopes\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MPLopes\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+      "projectUniqueName": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
       "projectName": "Repositorys",
-      "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+      "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
       "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-      "outputPath": "I:\\MimicAI\\back-end\\Repositorys\\obj\\",
+      "outputPath": "i:\\MimicAI\\back-end\\Repositorys\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
@@ -1317,7 +1313,6 @@
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -1325,8 +1320,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
-              "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
+            "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
+              "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
             }
           }
         }
@@ -1365,152 +1360,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "The local source 'C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages' doesn't exist."
-    }
-  ]
+  }
 }
