@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "akDSnC3nEYE=",
+  "dgSpecHash": "ilJBh979Jbk=",
   "success": true,
-  "projectFilePath": "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+  "projectFilePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MPLopes\\.nuget\\packages\\azure.ai.openai\\1.0.0-beta.17\\azure.ai.openai.1.0.0-beta.17.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\azure.core\\1.39.0\\azure.core.1.39.0.nupkg.sha512",
@@ -82,9 +82,9 @@
       "code": "NU1603",
       "level": "Warning",
       "message": "Services depends on Microsoft.ML.Tokenizers (>= 0.22.0-preview.1) but Microsoft.ML.Tokenizers 0.22.0-preview.1 was not found. Microsoft.ML.Tokenizers 0.22.0-preview.24162.2 was resolved instead.",
-      "projectPath": "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "projectPath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
       "warningLevel": 1,
-      "filePath": "i:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
+      "filePath": "I:\\MimicAI\\back-end\\WorkerService\\WorkerService.csproj",
       "libraryId": "Microsoft.ML.Tokenizers",
       "targetGraphs": [
         "net8.0"

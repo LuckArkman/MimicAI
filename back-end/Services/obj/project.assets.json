@@ -2469,8 +2469,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
-              "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
+            "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
+              "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
             },
             "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
               "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"

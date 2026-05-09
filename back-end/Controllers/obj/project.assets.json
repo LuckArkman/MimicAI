@@ -2466,11 +2466,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "i:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
+      "projectUniqueName": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
       "projectName": "Controllers",
-      "projectPath": "i:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
+      "projectPath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
       "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-      "outputPath": "i:\\MimicAI\\back-end\\Controllers\\obj\\",
+      "outputPath": "I:\\MimicAI\\back-end\\Controllers\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"

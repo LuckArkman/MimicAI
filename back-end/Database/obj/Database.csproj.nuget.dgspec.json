@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "i:\\MimicAI\\back-end\\Database\\Database.csproj": {}
+    "I:\\MimicAI\\back-end\\Database\\Database.csproj": {}
   },
   "projects": {
-    "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
+    "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "i:\\MimicAI\\back-end\\Database\\obj\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"

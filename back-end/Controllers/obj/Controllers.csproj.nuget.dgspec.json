@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "i:\\MimicAI\\back-end\\Controllers\\Controllers.csproj": {}
+    "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj": {}
   },
   "projects": {
-    "i:\\MimicAI\\back-end\\Controllers\\Controllers.csproj": {
+    "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "i:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
         "projectName": "Controllers",
-        "projectPath": "i:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
+        "projectPath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "i:\\MimicAI\\back-end\\Controllers\\obj\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Controllers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
+    "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj",
+        "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "i:\\MimicAI\\back-end\\Database\\obj\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -164,8 +164,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
-                "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
+              "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
+                "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
               }
             }
           }
@@ -228,8 +228,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "i:\\MimicAI\\back-end\\Database\\Database.csproj": {
-                "projectPath": "i:\\MimicAI\\back-end\\Database\\Database.csproj"
+              "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
+                "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
               },
               "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
                 "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
