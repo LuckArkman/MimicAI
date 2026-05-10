@@ -1,25 +1,3 @@
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.csproj.AssemblyReference.cache
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.GeneratedMSBuildEditorConfig.editorconfig
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.AssemblyInfoInputs.cache
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.AssemblyInfo.cs
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.csproj.CoreCompileInputs.cache
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.sourcelink.json
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Controllers.deps.json
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Controllers.dll
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Controllers.pdb
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Database.dll
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Repositorys.dll
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Services.dll
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Services.pdb
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Database.pdb
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Repositorys.pdb
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controll.01F35609.Up2Date
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.dll
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\refint\Controllers.dll
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.pdb
-I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\ref\Controllers.dll
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Onnx\gpt2.onnx
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Onnx\merges.txt
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Onnx\vocab.json
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Models.dll
-I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Models.pdb
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea91a3a3f05e03e6678f3c3a9f368b7447feb396f7235838fe89317e48eaa892
+size 1791

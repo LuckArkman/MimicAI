@@ -1,13 +1,3 @@
-{
-  "runtimeOptions": {
-    "tfm": "net8.0",
-    "framework": {
-      "name": "Microsoft.NETCore.App",
-      "version": "8.0.0"
-    },
-    "configProperties": {
-      "System.Reflection.NullabilityInfoContext.IsSupported": true,
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5509a12d0ca60582cabd36d5e6bed4e82501aa955e461aa5111f37f655f6db13
+size 337

@@ -1,18 +1,3 @@
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Services.deps.json
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Services.dll
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Services.pdb
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Database.dll
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Repositorys.dll
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Repositorys.pdb
-I:\MimicAI\back-end\Services\bin\Release\net8.0\Database.pdb
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.csproj.AssemblyReference.cache
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.AssemblyInfoInputs.cache
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.AssemblyInfo.cs
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.csproj.CoreCompileInputs.cache
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.sourcelink.json
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.csproj.Up2Date
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.dll
-I:\MimicAI\back-end\Services\obj\Release\net8.0\refint\Services.dll
-I:\MimicAI\back-end\Services\obj\Release\net8.0\Services.pdb
-I:\MimicAI\back-end\Services\obj\Release\net8.0\ref\Services.dll
+version https://git-lfs.github.com/spec/v1
+oid sha256:39db506442e1f9ae48013a47e91116df1cab2447f2b7a3fd47dab9ef38e15855
+size 1287

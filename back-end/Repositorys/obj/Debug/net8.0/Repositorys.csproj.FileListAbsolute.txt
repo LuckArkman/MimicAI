@@ -1,16 +1,3 @@
-I:\MimicAI\back-end\Repositorys\bin\Debug\net8.0\Repositorys.deps.json
-I:\MimicAI\back-end\Repositorys\bin\Debug\net8.0\Repositorys.dll
-I:\MimicAI\back-end\Repositorys\bin\Debug\net8.0\Repositorys.pdb
-I:\MimicAI\back-end\Repositorys\bin\Debug\net8.0\Database.dll
-I:\MimicAI\back-end\Repositorys\bin\Debug\net8.0\Database.pdb
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.csproj.AssemblyReference.cache
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.GeneratedMSBuildEditorConfig.editorconfig
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.AssemblyInfoInputs.cache
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.AssemblyInfo.cs
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.csproj.CoreCompileInputs.cache
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.sourcelink.json
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Reposito.19D10BBC.Up2Date
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.dll
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\refint\Repositorys.dll
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\Repositorys.pdb
-I:\MimicAI\back-end\Repositorys\obj\Debug\net8.0\ref\Repositorys.dll
+version https://git-lfs.github.com/spec/v1
+oid sha256:ebf1b6fdb3d9ac24e75f1fdeb0d7c68c5e8d8a765ca058e1cbd6c0991d2dd497
+size 1214

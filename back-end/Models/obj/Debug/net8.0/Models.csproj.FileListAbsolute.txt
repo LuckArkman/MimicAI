@@ -1,16 +1,3 @@
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.csproj.AssemblyReference.cache
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.GeneratedMSBuildEditorConfig.editorconfig
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.AssemblyInfoInputs.cache
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.AssemblyInfo.cs
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.csproj.CoreCompileInputs.cache
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.sourcelink.json
-I:\MimicAI\back-end\Models\bin\Debug\net8.0\Onnx\gpt2.onnx
-I:\MimicAI\back-end\Models\bin\Debug\net8.0\Onnx\merges.txt
-I:\MimicAI\back-end\Models\bin\Debug\net8.0\Onnx\vocab.json
-I:\MimicAI\back-end\Models\bin\Debug\net8.0\Models.deps.json
-I:\MimicAI\back-end\Models\bin\Debug\net8.0\Models.dll
-I:\MimicAI\back-end\Models\bin\Debug\net8.0\Models.pdb
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.dll
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\refint\Models.dll
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\Models.pdb
-I:\MimicAI\back-end\Models\obj\Debug\net8.0\ref\Models.dll
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3139a8f606b5d58bd81aeeb37cac7303389b58c1fca246d029d5e775a4718d0
+size 1064
