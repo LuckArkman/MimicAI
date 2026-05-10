@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "i:\\MimicAI\\back-end\\Services\\Services.csproj": {
-                "projectPath": "i:\\MimicAI\\back-end\\Services\\Services.csproj"
+              "I:\\MimicAI\\back-end\\Services\\Services.csproj": {
+                "projectPath": "I:\\MimicAI\\back-end\\Services\\Services.csproj"
               }
             }
           }
@@ -141,14 +141,84 @@
         }
       }
     },
-    "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+    "I:\\MimicAI\\back-end\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
-        "projectName": "Repositorys",
-        "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "I:\\MimicAI\\back-end\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "i:\\MimicAI\\back-end\\Repositorys\\obj\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.ML.OnnxRuntime": {
+              "target": "Package",
+              "version": "[1.17.1, )"
+            },
+            "Microsoft.ML.Tokenizers": {
+              "target": "Package",
+              "version": "[0.22.0-preview.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "projectName": "Repositorys",
+        "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Repositorys\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -205,14 +275,14 @@
         }
       }
     },
-    "i:\\MimicAI\\back-end\\Services\\Services.csproj": {
+    "I:\\MimicAI\\back-end\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "i:\\MimicAI\\back-end\\Services\\Services.csproj",
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "i:\\MimicAI\\back-end\\Services\\Services.csproj",
+        "projectPath": "I:\\MimicAI\\back-end\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "i:\\MimicAI\\back-end\\Services\\obj\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -231,8 +301,11 @@
               "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
                 "projectPath": "I:\\MimicAI\\back-end\\Database\\Database.csproj"
               },
-              "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
-                "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
+              "I:\\MimicAI\\back-end\\Models\\Models.csproj": {
+                "projectPath": "I:\\MimicAI\\back-end\\Models\\Models.csproj"
+              },
+              "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+                "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj"
               }
             }
           }
@@ -253,14 +326,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.ML.OnnxRuntime": {
-              "target": "Package",
-              "version": "[1.17.1, )"
-            },
-            "Microsoft.ML.Tokenizers": {
-              "target": "Package",
-              "version": "[0.22.0-preview.1, )"
-            },
             "Microsoft.SemanticKernel": {
               "target": "Package",
               "version": "[1.15.0, )"
@@ -268,6 +333,10 @@
             "Parquet.Net": {
               "target": "Package",
               "version": "[6.0.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.18.0, )"
             }
           },
           "imports": [

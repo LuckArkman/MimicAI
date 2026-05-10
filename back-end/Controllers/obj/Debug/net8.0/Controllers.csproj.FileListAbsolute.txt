@@ -18,3 +18,8 @@ I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.dll
 I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\refint\Controllers.dll
 I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\Controllers.pdb
 I:\MimicAI\back-end\Controllers\obj\Debug\net8.0\ref\Controllers.dll
+I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Onnx\gpt2.onnx
+I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Onnx\merges.txt
+I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Onnx\vocab.json
+I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Models.dll
+I:\MimicAI\back-end\Controllers\bin\Debug\net8.0\Models.pdb

@@ -1,5 +1,9 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using Database.Postgres;
 using Repositorys.Interfaces;
 using Services.Interfaces;
@@ -9,10 +13,12 @@ namespace Services.Implementations;
 public class AuthService : IAuthService
 {
     private readonly IUserRepository _userRepository;
+    private readonly IConfiguration _configuration;
 
-    public AuthService(IUserRepository userRepository)
+    public AuthService(IUserRepository userRepository, IConfiguration configuration)
     {
         _userRepository = userRepository;
+        _configuration = configuration;
     }
 
     public async Task<AuthResult> RegisterAsync(string name, string email, string password)
@@ -30,7 +36,6 @@ public class AuthService : IAuthService
         string salt = Guid.NewGuid().ToString("N");
         string passwordHash = HashPassword(password, salt);
 
-        // We store the salt alongside the hash in the entity (we can append it or use a simple format "salt.hash")
         var user = new UserEntity
         {
             Name = name,
@@ -40,7 +45,7 @@ public class AuthService : IAuthService
         };
 
         var createdUser = await _userRepository.CreateAsync(user);
-        string token = GenerateSimpleToken(createdUser);
+        string token = GenerateJwtToken(createdUser);
 
         return new AuthResult
         {
@@ -80,7 +85,7 @@ public class AuthService : IAuthService
             return new AuthResult { Success = false, Message = "E-mail ou senha incorretos." };
         }
 
-        string token = GenerateSimpleToken(user);
+        string token = GenerateJwtToken(user);
 
         return new AuthResult
         {
@@ -104,11 +109,30 @@ public class AuthService : IAuthService
         return builder.ToString();
     }
 
-    private string GenerateSimpleToken(UserEntity user)
+    private string GenerateJwtToken(UserEntity user)
     {
-        // Simple token generation (can be replaced by standard JwtSecurityTokenHandler)
-        // Format: Base64(UserId:Email:Name:Timestamp)
-        var tokenContent = $"{user.Id}:{user.Email}:{user.Name}:{DateTime.UtcNow.Ticks}";
-        return Convert.ToBase64String(Encoding.UTF8.GetBytes(tokenContent));
+        var tokenHandler = new JwtSecurityTokenHandler();
+        
+        // Use a secure key from configuration, or fallback to a hardcoded development key
+        var keyString = _configuration["Jwt:Key"] ?? "MinhaChaveSuperSecretaDesenvolvimento12345!@#";
+        var key = Encoding.ASCII.GetBytes(keyString);
+        var issuer = _configuration["Jwt:Issuer"] ?? "MimicAI";
+
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+            Subject = new ClaimsIdentity(new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.Name)
+            }),
+            Expires = DateTime.UtcNow.AddDays(7),
+            Issuer = issuer,
+            Audience = issuer,
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        };
+
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        return tokenHandler.WriteToken(token);
     }
 }

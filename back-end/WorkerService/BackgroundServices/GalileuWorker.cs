@@ -74,12 +74,12 @@ public class GalileuWorker : BackgroundService
                         string documentContent = $"Pergunta: {task.Prompt}\nResposta: {task.Answer}";
                         string documentId = Guid.NewGuid().ToString("N");
 
-                        // 2. Computa o embedding local usando o agente BERT unificado
+                        // 2. Computa o embedding local usando apenas a pergunta (garantindo máxima correspondência semântica com futuras consultas)
                         float[] embedding;
                         using (var scope = _serviceScopeFactory.CreateScope())
                         {
                             var embeddingService = scope.ServiceProvider.GetRequiredService<IEmbeddingService>();
-                            embedding = await embeddingService.GenerateEmbeddingAsync(documentContent);
+                            embedding = await embeddingService.GenerateEmbeddingAsync(task.Prompt);
                         }
 
                         // 3. Estrutura os metadados

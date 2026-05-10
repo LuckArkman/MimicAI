@@ -70,6 +70,8 @@ public class RagService : IRagService
         var vectorMatch = await _vectorRepository.SearchSimilarVectorsAsync(queryEmbedding, limit: 1);
 
         // 4. Evaluate context sufficiency
+        Console.WriteLine($"[RAG DEBUG] Query: '{prompt}', Best Match Score: {(vectorMatch != null ? vectorMatch.SimilarityScore.ToString("F4") : "None")}, Threshold: {_cosineThreshold}");
+
         if (vectorMatch != null && vectorMatch.SimilarityScore >= _cosineThreshold)
         {
             // CACHE HIT - local model digestion (delegated to LocalLlmService)

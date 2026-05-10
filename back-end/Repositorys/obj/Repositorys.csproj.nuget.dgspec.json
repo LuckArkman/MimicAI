@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {}
+    "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {}
   },
   "projects": {
     "I:\\MimicAI\\back-end\\Database\\Database.csproj": {
@@ -74,14 +74,14 @@
         }
       }
     },
-    "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
+    "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "projectUniqueName": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
         "projectName": "Repositorys",
-        "projectPath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+        "projectPath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
         "packagesPath": "C:\\Users\\MPLopes\\.nuget\\packages\\",
-        "outputPath": "i:\\MimicAI\\back-end\\Repositorys\\obj\\",
+        "outputPath": "I:\\MimicAI\\back-end\\Repositorys\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MPLopes\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repositorys.Interfaces;
 using Services.Interfaces;
 
 namespace Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class RagController : ControllerBase

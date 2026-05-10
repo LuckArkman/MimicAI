@@ -81,7 +81,7 @@ public class EmbeddingService : IEmbeddingService
             double sum = 0;
             foreach (var word in words)
             {
-                int hash = word.GetHashCode();
+                int hash = GetStableHashCode(word);
                 sum += Math.Sin(hash + i) * Math.Cos((double)i / vector.Length);
             }
             vector[i] = (float)Math.Clamp(sum / (words.Length > 0 ? words.Length : 1), -1.0, 1.0);
@@ -100,5 +100,18 @@ public class EmbeddingService : IEmbeddingService
         }
 
         return vector;
+    }
+
+    private int GetStableHashCode(string str)
+    {
+        unchecked
+        {
+            int hash = (int)2166136261U;
+            foreach (char c in str)
+            {
+                hash = (hash ^ c) * 16777619;
+            }
+            return hash;
+        }
     }
 }

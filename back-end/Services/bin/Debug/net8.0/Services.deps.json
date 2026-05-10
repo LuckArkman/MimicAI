@@ -9,9 +9,8 @@
       "Services/1.0.0": {
         "dependencies": {
           "Database": "1.0.0",
-          "Microsoft.ML.OnnxRuntime": "1.17.1",
-          "Microsoft.ML.Tokenizers": "0.22.0-preview.24162.2",
           "Microsoft.SemanticKernel": "1.15.0",
+          "Models": "1.0.0",
           "Parquet.Net": "6.0.2",
           "Repositorys": "1.0.0"
         },
@@ -607,6 +606,18 @@
           }
         }
       },
+      "Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime": "1.17.1",
+          "Microsoft.ML.Tokenizers": "0.22.0-preview.24162.2"
+        },
+        "runtime": {
+          "Models.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Repositorys/1.0.0": {
         "dependencies": {
           "Database": "1.0.0"
@@ -886,6 +897,11 @@
       "hashPath": "zstdsharp.port.0.8.8.nupkg.sha512"
     },
     "Database/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

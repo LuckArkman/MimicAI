@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "FnAp2JPF92E=",
+  "success": true,
+  "projectFilePath": "I:\\MimicAI\\back-end\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.17.1\\microsoft.ml.onnxruntime.1.17.1.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.17.1\\microsoft.ml.onnxruntime.managed.1.17.1.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.tokenizers\\0.22.0-preview.24162.2\\microsoft.ml.tokenizers.0.22.0-preview.24162.2.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\system.text.json\\6.0.1\\system.text.json.6.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "Models depends on Microsoft.ML.Tokenizers (>= 0.22.0-preview.1) but Microsoft.ML.Tokenizers 0.22.0-preview.1 was not found. Microsoft.ML.Tokenizers 0.22.0-preview.24162.2 was resolved instead.",
+      "projectPath": "I:\\MimicAI\\back-end\\Models\\Models.csproj",
+      "warningLevel": 1,
+      "filePath": "I:\\MimicAI\\back-end\\Models\\Models.csproj",
+      "libraryId": "Microsoft.ML.Tokenizers",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

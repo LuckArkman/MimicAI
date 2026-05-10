@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GbzbFYq8Ovw=",
+  "dgSpecHash": "fkNl3FPtNiQ=",
   "success": true,
   "projectFilePath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,10 @@
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.1\\microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.18.0\\microsoft.identitymodel.abstractions.8.18.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.18.0\\microsoft.identitymodel.jsonwebtokens.8.18.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.identitymodel.logging\\8.18.0\\microsoft.identitymodel.logging.8.18.0.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.18.0\\microsoft.identitymodel.tokens.8.18.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.17.1\\microsoft.ml.onnxruntime.1.17.1.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.17.1\\microsoft.ml.onnxruntime.managed.1.17.1.nupkg.sha512",
@@ -44,6 +48,7 @@
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.1\\system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512",
+    "C:\\Users\\MPLopes\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.18.0\\system.identitymodel.tokens.jwt.8.18.0.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -59,7 +64,7 @@
     {
       "code": "NU1603",
       "level": "Warning",
-      "message": "Services depends on Microsoft.ML.Tokenizers (>= 0.22.0-preview.1) but Microsoft.ML.Tokenizers 0.22.0-preview.1 was not found. Microsoft.ML.Tokenizers 0.22.0-preview.24162.2 was resolved instead.",
+      "message": "Models depends on Microsoft.ML.Tokenizers (>= 0.22.0-preview.1) but Microsoft.ML.Tokenizers 0.22.0-preview.1 was not found. Microsoft.ML.Tokenizers 0.22.0-preview.24162.2 was resolved instead.",
       "projectPath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",
       "warningLevel": 1,
       "filePath": "I:\\MimicAI\\back-end\\Controllers\\Controllers.csproj",

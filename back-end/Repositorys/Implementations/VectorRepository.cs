@@ -83,14 +83,15 @@ public class VectorRepository : IVectorRepository
             if (!response.IsSuccessStatusCode) return null;
 
             var jsonString = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"[CHROMA DB QUERY DEBUG] Raw JSON: {jsonString}");
             using var doc = JsonDocument.Parse(jsonString);
             var root = doc.RootElement;
 
             // Extract results from arrays
-            var ids = root.GetProperty("ids").GetProperty("0");
-            var distances = root.GetProperty("distances").GetProperty("0");
-            var documents = root.GetProperty("documents").GetProperty("0");
-            var metadatas = root.GetProperty("metadatas").GetProperty("0");
+            var ids = root.GetProperty("ids")[0];
+            var distances = root.GetProperty("distances")[0];
+            var documents = root.GetProperty("documents")[0];
+            var metadatas = root.GetProperty("metadatas")[0];
 
             if (ids.GetArrayLength() == 0) return null;
 
@@ -119,8 +120,9 @@ public class VectorRepository : IVectorRepository
 
             return result;
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine($"[CHROMA SEARCH ERROR] {ex.GetType().Name}: {ex.Message}");
             return null;
         }
     }

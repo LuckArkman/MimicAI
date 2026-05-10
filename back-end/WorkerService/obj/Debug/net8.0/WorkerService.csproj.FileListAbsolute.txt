@@ -121,3 +121,8 @@ I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\CommunityToolkit.HighPerforma
 I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\K4os.Compression.LZ4.dll
 I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
 I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Parquet.dll
+I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Onnx\gpt2.onnx
+I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Onnx\merges.txt
+I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Onnx\vocab.json
+I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Models.dll
+I:\MimicAI\back-end\WorkerService\bin\Debug\net8.0\Models.pdb

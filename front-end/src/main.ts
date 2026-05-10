@@ -144,6 +144,11 @@ async function apiPost(endpoint: string, body: object, token?: string) {
   });
 
   if (!response.ok) {
+    if (response.status === 401) {
+      state.clearUser();
+      render();
+      throw new Error('Sessão expirada. Faça login novamente.');
+    }
     const errData = await response.json().catch(() => ({}));
     throw new Error(errData.message || 'Falha na requisição da API.');
   }
@@ -163,6 +168,11 @@ async function apiGet(endpoint: string, token?: string) {
   });
 
   if (!response.ok) {
+    if (response.status === 401) {
+      state.clearUser();
+      render();
+      throw new Error('Sessão expirada. Faça login novamente.');
+    }
     throw new Error('Falha ao obter dados da API.');
   }
 
@@ -754,6 +764,11 @@ function attachTabNavigationEvents() {
 
   document.querySelector('#nav-profile')?.addEventListener('click', () => {
     state.currentTab = 'profile';
+    render();
+  });
+
+  document.querySelector('#btn-logout')?.addEventListener('click', () => {
+    state.clearUser();
     render();
   });
 }

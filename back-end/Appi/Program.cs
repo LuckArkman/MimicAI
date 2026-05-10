@@ -1,8 +1,11 @@
+using System.Text;
 using System.Threading.Channels;
 using Database.Chroma;
 using Database.Mongo;
 using Database.Postgres;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Repositorys.Implementations;
 using Repositorys.Interfaces;
 using Services.Implementations;
@@ -14,6 +17,32 @@ var builder = WebApplication.CreateBuilder(args);
 // 1. Add services to the container
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configure JWT Authentication
+var jwtKey = builder.Configuration["Jwt:Key"] ?? "MinhaChaveSuperSecretaDesenvolvimento12345!@#";
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "MimicAI";
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false; // Set to true in production
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtKey)),
+        ValidateIssuer = true,
+        ValidIssuer = jwtIssuer,
+        ValidateAudience = true,
+        ValidAudience = jwtIssuer,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+});
 
 // Configure CORS for Frontend integration
 builder.Services.AddCors(options =>
@@ -56,6 +85,7 @@ builder.Services.AddScoped<IChatHistoryRepository, ChatHistoryRepository>();
 builder.Services.AddScoped<IVectorRepository, VectorRepository>();
 
 // 4. Register Services
+builder.Services.AddSingleton<Models.LocalModelExecutor>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IExternalLlmService, ExternalLlmService>();
 builder.Services.AddScoped<IRagService, RagService>();
@@ -63,7 +93,7 @@ builder.Services.AddScoped<IFinetuningService, FinetuningService>();
 builder.Services.AddScoped<IOrchestrationService, OrchestrationService>();
 builder.Services.AddScoped<IIntegrationService, IntegrationService>();
 builder.Services.AddScoped<IEmbeddingService, EmbeddingService>();
-builder.Services.AddScoped<ILocalLlmService, LocalLlmService>();
+builder.Services.AddSingleton<ILocalLlmService, LocalLlmService>();
 
 // 5. Register Ingestion Event Channel (Thread-safe background queue)
 var queueChannel = Channel.CreateUnbounded<IngestionTask>(new UnboundedChannelOptions
@@ -92,6 +122,7 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

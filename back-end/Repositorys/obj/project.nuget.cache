@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HjQD0mmCZ2w=",
+  "dgSpecHash": "PqGA8V6UlYI=",
   "success": true,
-  "projectFilePath": "i:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
+  "projectFilePath": "I:\\MimicAI\\back-end\\Repositorys\\Repositorys.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MPLopes\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\MPLopes\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
